@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> -->
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        html,body{
+            background-color: #ed5565;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 640px;
+            flex-wrap:wrap;
+            margin: 0 auto;
+        }
+
+        .item {
+            position: relative;
+            background-color: #ed5565;
+            /* background-color: #1abc9c; */
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 90px;
+            margin: 10px;
+        }
+        .item span{
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            color: whitesmoke;
+            font-size: 10px;
+            word-wrap:break-word;
+        }
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="svg-loaders/ball-triangle.svg" width="50" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/bars.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/tail-spin.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/circles.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/puff.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/spinning-circles.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/three-dots.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/oval.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/hearts.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/rings.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/audio.svg" width="40" />
+        </div>
+        <div class="item">
+            <img src="svg-loaders/grid.svg" width="40" />
+        </div>
+    </div>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $( () => {
+            console.log()
+            $('.item').each( function () {
+                var url_String = $(this).find('img').attr('src');
+                $(this).append('<span></span>')
+                $(this).find('span').text(url_String)
+            })
+        })
+    </script>
+</html>
